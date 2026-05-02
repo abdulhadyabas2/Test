@@ -13,9 +13,14 @@
         }
         .tab-content {
             display: none;
+            animation: fadeIn 0.4s ease-in-out;
         }
         .tab-content.active {
             display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         .verb-tag {
             background: #e2e8f0;
@@ -54,6 +59,14 @@
             outline: none;
             box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
         }
+        .qa-card {
+            border-right: 4px solid transparent;
+            transition: all 0.3s;
+        }
+        .qa-card:hover {
+            border-right-color: #6366f1;
+            background-color: #fafaf9;
+        }
     </style>
 </head>
 <body class="p-4 md:p-8">
@@ -66,13 +79,14 @@
         </header>
 
         <!-- Navigation Tabs -->
-        <nav class="flex flex-wrap border-b bg-gray-50">
-            <button onclick="showTab('past-simple')" id="btn-past-simple" class="tab-btn px-4 py-4 font-bold text-indigo-600 border-b-2 border-indigo-600 hover:bg-indigo-50 transition-all">ماضی ساده</button>
-            <button onclick="showTab('past-cont')" id="btn-past-cont" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">ماضی استمراری</button>
-            <button onclick="showTab('pres-ind')" id="btn-pres-ind" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع اخباری</button>
-            <button onclick="showTab('pres-sub')" id="btn-pres-sub" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع التزامی</button>
-            <button onclick="showTab('verb-library')" id="btn-verb-library" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">بانک ۱۰۰ فعل</button>
-            <button onclick="showTab('vocab')" id="btn-vocab" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">واژگان جامع</button>
+        <nav class="flex flex-wrap border-b bg-gray-50 overflow-x-auto">
+            <button onclick="showTab('past-simple')" id="btn-past-simple" class="tab-btn px-4 py-4 font-bold text-indigo-600 border-b-2 border-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">ماضی ساده</button>
+            <button onclick="showTab('past-cont')" id="btn-past-cont" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">ماضی استمراری</button>
+            <button onclick="showTab('pres-ind')" id="btn-pres-ind" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">مضارع اخباری</button>
+            <button onclick="showTab('pres-sub')" id="btn-pres-sub" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">مضارع التزامی</button>
+            <button onclick="showTab('verb-library')" id="btn-verb-library" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">بانک ۱۰۰ فعل</button>
+            <button onclick="showTab('vocab')" id="btn-vocab" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">واژگان جامع</button>
+            <button onclick="showTab('exam-qa')" id="btn-exam-qa" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all whitespace-nowrap">آزمون شفاهی (محادثة)</button>
         </nav>
 
         <!-- Content Area -->
@@ -506,6 +520,82 @@
                 </div>
             </div>
 
+            <!-- New Section: Exam Q&A -->
+            <div id="exam-qa" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-2">نمونه سوالات آزمون شفاهی (أسئلة الامتحان الشفهي)</h2>
+                <p class="text-gray-600 mb-8">مهم‌ترین سوالات و جواب‌های استاندارد برای آمادگی در آزمون شفاهی زبان فارسی.</p>
+                
+                <div class="space-y-4">
+                    
+                    <!-- Question Card 1 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۱. اسم شما چیه؟ اهل کجایید؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> من <span class="text-indigo-600 font-semibold">شیما عباس علی</span> هستم. من اهل عراق هستم (یا: من عراقی هستم).</p>
+                    </div>
+
+                    <!-- Question Card 2 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۲. چند سال دارید؟</h4>
+                        <p class="text-gray-800 mb-3"><span class="font-bold text-emerald-600">جواب:</span> من چهل و هفت سال دارم. (یا: من چهل و هفت ساله هستم).</p>
+                        <div class="bg-amber-50 p-3 rounded text-sm text-amber-800 border-r-4 border-amber-400">
+                            <strong>نکته گرامری:</strong> کلمه «سال» با فعل «دارم» استفاده می‌شود (من چهل سال دارم). کلمه «ساله» با فعل «هستم» استفاده می‌شود (من چهل ساله هستم).
+                        </div>
+                    </div>
+
+                    <!-- Question Card 3 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۳. رشته و مقطع تحصیلی شما چیه؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> رشته تحصیلی من <span class="font-semibold text-indigo-600">تاریخ اسلام</span> است و در مقطع <span class="font-semibold text-indigo-600">دکتری</span> در دانشگاه تهران مشغول به تحصیل هستم.</p>
+                    </div>
+
+                    <!-- Question Card 4 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۴. شما به مطالعه علاقه‌مند هستید؟ به چه کتاب‌هایی بیشتر علاقه دارید؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> بله، من به مطالعه علاقه‌مند هستم (نعم أنا مهتم بالقراءة). بیشتر به داستان‌های عاشقانه و کتاب‌هایی درباره جنگ و صلح علاقه‌مند هستم.</p>
+                    </div>
+
+                    <!-- Question Card 5 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۵. اوقات فراغت چه کار می‌کنید؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> در اوقات فراغتم معمولاً به نوشتن تحقیق‌ها و مقاله‌های مربوط به درس‌هایم می‌پردازم.</p>
+                    </div>
+
+                    <!-- Question Card 6 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۶. چه فصلی را دوست داری؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> من فصل زمستان را دوست دارم چون هوا سرد و تازه است و در این فصل برف می‌بارد و زیبایی خاصی دارد. همچنین می‌توان از نوشیدنی‌های گرم لذت برد.</p>
+                    </div>
+
+                    <!-- Question Card 7 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۷. کارهای روزانه خودت را بگو (از صبح تا شب چه کار می‌کنی)؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> هر روز صبح (ساعت ۶) از خواب بیدار می‌شوم، صبحانه می‌خورم، سپس به سر کار می‌روم. ناهار می‌خورم و بعد از کار به خانه بازمی‌گردم. عصرها معمولاً کمی استراحت می‌کنم و شب‌ها با خانواده وقت می‌گذرانم.</p>
+                    </div>
+
+                    <!-- Question Card 8 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۸. چه غذایی را دوست دارید؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> من غذاهای سنتی ایرانی را بسیار دوست دارم؛ به ویژه <span class="font-semibold text-indigo-600">قرمه‌سبزی</span> و <span class="font-semibold text-indigo-600">چلوکباب</span>.</p>
+                    </div>
+
+                    <!-- Question Card 9 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۹. چرا فارسی می‌خوانی؟</h4>
+                        <p class="text-gray-800"><span class="font-bold text-emerald-600">جواب:</span> چون به زبان فارسی و فرهنگ ایران علاقه دارم. همچنین برای تحصیلاتم در مقطع دکتری نیاز دارم که زبان فارسی یاد بگیرم تا بتوانم در دانشگاه ارتباط برقرار کنم.</p>
+                    </div>
+
+                    <!-- Question Card 10 -->
+                    <div class="bg-white p-5 rounded-xl border border-gray-200 shadow-sm qa-card">
+                        <h4 class="font-bold text-lg text-indigo-900 mb-2">۱۰. اسم استاد شما چیست؟</h4>
+                        <p class="text-gray-800 mb-3"><span class="font-bold text-emerald-600">جواب:</span> استاد من <span class="font-semibold text-indigo-600">سرکار خانم دکتر نوروزی</span> است.</p>
+                        <div class="bg-indigo-50 p-3 rounded text-sm text-indigo-800 border-r-4 border-indigo-400">
+                            <strong>نکته (ملاحظة):</strong> عبارت «سرکار خانم» برای احترام به استاد خانم استفاده می‌شود.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
             <!-- THE MASTER SUMMARY TABLE -->
             <div id="summary-section" class="mt-16 bg-gray-900 text-white rounded-2xl p-6 md:p-10 shadow-xl">
                 <h2 class="text-3xl font-bold text-center mb-4 text-indigo-300">جدول جامع تبدیل جملات در تمامی زمان‌ها</h2>
@@ -693,7 +783,8 @@
             activeBtn.classList.remove('text-gray-500');
             activeBtn.classList.add('text-indigo-600', 'border-indigo-600', 'border-b-2');
 
-            document.getElementById('summary-section').style.display = (tabId === 'verb-library' || tabId === 'vocab') ? 'none' : 'block';
+            // Hide summary section for library, vocab, and exam tabs
+            document.getElementById('summary-section').style.display = (tabId === 'verb-library' || tabId === 'vocab' || tabId === 'exam-qa') ? 'none' : 'block';
         }
 
         window.onload = populateVerbs;
