@@ -1,1 +1,336 @@
 
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>راهنمای دقیق زمان‌های زبان فارسی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Vazirmatn', sans-serif;
+            background-color: #f0f2f5;
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        .verb-tag {
+            background: #e2e8f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        .formula {
+            background: #f1f5f9;
+            border-right: 4px solid #3b82f6;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-size: 1.1rem;
+        }
+        .example-box {
+            background: #fffbeb;
+            border: 1px solid #fde68a;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+        .summary-table th {
+            background-color: #4338ca;
+            color: white;
+        }
+        .verb-list-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        #searchInput {
+            border: 2px solid #e2e8f0;
+            transition: all 0.3s;
+        }
+        #searchInput:focus {
+            border-color: #4338ca;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.2);
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <div class="max-w-6xl mx-auto bg-white shadow-2xl rounded-2xl overflow-hidden">
+        <!-- Header -->
+        <header class="bg-indigo-700 text-white p-8 text-center">
+            <h1 class="text-3xl font-bold mb-2">یادگیری دقیق زمان‌ها و ۱۰۰ فعل فارسی</h1>
+            <p class="opacity-90">راهنمای جامع برای درک بن فعل‌ها و روش استفاده از آن‌ها</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="flex flex-wrap border-b bg-gray-50">
+            <button onclick="showTab('past-simple')" id="btn-past-simple" class="tab-btn px-4 py-4 font-bold text-indigo-600 border-b-2 border-indigo-600 hover:bg-indigo-50 transition-all">ماضی ساده</button>
+            <button onclick="showTab('past-cont')" id="btn-past-cont" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">ماضی استمراری</button>
+            <button onclick="showTab('pres-ind')" id="btn-pres-ind" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع اخباری</button>
+            <button onclick="showTab('pres-sub')" id="btn-pres-sub" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع التزامی</button>
+            <button onclick="showTab('verb-library')" id="btn-verb-library" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">بانک ۱۰۰ فعل</button>
+        </nav>
+
+        <!-- Content Area -->
+        <div class="p-6 md:p-10">
+            
+            <!-- Section: Past Simple -->
+            <div id="past-simple" class="tab-content active">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-2">ماضی ساده</h2>
+                <div class="formula"><strong>طرز ساخت:</strong> بن ماضی + شناسه</div>
+                <div class="example-box">
+                    <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
+                    <ul class="space-y-2">
+                        <li>🔵 من دیروز به کتابخانه <span class="font-bold text-blue-700">رفتم</span>.</li>
+                        <li>🔵 او نامه را <span class="font-bold text-blue-700">نوشت</span>.</li>
+                        <li>🔵 ما در رستوران غذا <span class="font-bold text-blue-700">خوردیم</span>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section: Past Continuous -->
+            <div id="past-cont" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-2">ماضی استمراری</h2>
+                <div class="formula"><strong>طرز ساخت:</strong> می‌ + بن ماضی + شناسه</div>
+                <div class="example-box">
+                    <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
+                    <ul class="space-y-2">
+                        <li>🟢 من هر روز پیاده <span class="font-bold text-green-700">می‌رفتم</span>.</li>
+                        <li>🟢 آن زمان، او نامه <span class="font-bold text-green-700">می‌نوشت</span>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section: Present Indicative -->
+            <div id="pres-ind" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-2">مضارع اخباری</h2>
+                <div class="formula"><strong>طرز ساخت:</strong> می‌ + بن مضارع + شناسه</div>
+                <div class="example-box">
+                    <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
+                    <ul class="space-y-2">
+                        <li>🔴 من هر شب کتاب <span class="font-bold text-red-700">می‌خوانم</span>.</li>
+                        <li>🔴 او همیشه چای <span class="font-bold text-red-700">می‌خورد</span>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section: Present Subjunctive -->
+            <div id="pres-sub" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-2">مضارع التزامی</h2>
+                <div class="formula"><strong>طرز ساخت:</strong> بـ + بن مضارع + شناسه</div>
+                <div class="example-box">
+                    <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
+                    <ul class="space-y-2">
+                        <li>🟣 شاید فردا <span class="font-bold text-purple-700">بروم</span>.</li>
+                        <li>🟣 باید این درس را <span class="font-bold text-purple-700">بخوانی</span>.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- New Section: Verb Library (100 Verbs) -->
+            <div id="verb-library" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-4">بانک ۱۰۰ فعل مهم فارسی</h2>
+                <p class="text-gray-600 mb-6">در اینجا لیست مهم‌ترین فعل‌ها به همراه هر دو بن (ماضی و مضارع) آماده شده است.</p>
+                
+                <div class="mb-6">
+                    <input type="text" id="searchInput" onkeyup="filterVerbs()" placeholder="جستجوی فعل (فارسی)..." class="w-full p-4 rounded-xl shadow-inner bg-gray-50">
+                </div>
+
+                <div class="overflow-x-auto max-h-[600px] overflow-y-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-right border-collapse verb-list-table" id="verbsTable">
+                        <thead class="sticky top-0 bg-indigo-600 text-white">
+                            <tr>
+                                <th class="p-3 border">#</th>
+                                <th class="p-3 border">مصدر</th>
+                                <th class="p-3 border text-blue-200">بن ماضی</th>
+                                <th class="p-3 border text-green-200">بن مضارع</th>
+                                <th class="p-3 border">معنی / مفهوم</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <!-- JS will populate this -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- THE MASTER SUMMARY TABLE -->
+            <div id="summary-section" class="mt-16 bg-gray-900 text-white rounded-2xl p-6 md:p-10 shadow-xl">
+                <h2 class="text-3xl font-bold text-center mb-8 text-indigo-300">جدول خلاصه شناسه زمان‌ها (برای فعل رفتن)</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-center border-collapse summary-table text-sm md:text-base">
+                        <thead>
+                            <tr>
+                                <th class="p-4 border border-gray-700">ضمیر</th>
+                                <th class="p-4 border border-gray-100 bg-blue-900">ماضی ساده</th>
+                                <th class="p-4 border border-gray-100 bg-green-900">ماضی استمراری</th>
+                                <th class="p-4 border border-gray-100 bg-red-900">مضارع اخباری</th>
+                                <th class="p-4 border border-gray-100 bg-purple-900">مضارع التزامی</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-200">
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">من</td><td>رفتم</td><td>می‌رفتم</td><td>می‌روم</td><td>بروم</td></tr>
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">تو</td><td>رفتی</td><td>می‌رفتی</td><td>می‌روی</td><td>بروی</td></tr>
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">او</td><td>رفت</td><td>می‌رفت</td><td>می‌رود</td><td>برود</td></tr>
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">ما</td><td>رفتیم</td><td>می‌رفتیم</td><td>می‌رویم</td><td>برویم</td></tr>
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">شما</td><td>رفتید</td><td>می‌رفتید</td><td>می‌روید</td><td>بروید</td></tr>
+                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">آنها</td><td>رفتند</td><td>می‌رفتند</td><td>می‌روند</td><td>بروند</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const verbsData = [
+            {m: "رفتن", bm: "رفت", bz: "رو", k: "رفتن"},
+            {m: "آمدن", bm: "آمد", bz: "آی", k: "آمدن"},
+            {m: "خوردن", bm: "خورد", bz: "خور", k: "خوردن / میل کردن"},
+            {m: "نوشیدن", bm: "نوشید", bz: "نوش", k: "نوشیدن مایعات"},
+            {m: "گفتن", bm: "گفت", bz: "گو", k: "صحبت کردن"},
+            {m: "شنیدن", bm: "شنید", bz: "شنو", k: "استماع کردن"},
+            {m: "دیدن", bm: "دید", bz: "بین", k: "تماشا کردن"},
+            {m: "داشتن", bm: "داشت", bz: "دار", k: "دارا بودن"},
+            {m: "بودن", bm: "بود", bz: "باش / هست", k: "وجود داشتن"},
+            {m: "کردن", bm: "کرد", bz: "کن", k: "انجام دادن"},
+            {m: "نوشتن", bm: "نوشت", bz: "نویس", k: "تحریر کردن"},
+            {m: "خواندن", bm: "خواند", bz: "خوان", k: "مطالعه کردن"},
+            {m: "خریدن", bm: "خرید", bz: "خر", k: "تهیه کردن"},
+            {m: "فروختن", bm: "فروخت", bz: "فروش", k: "واگذار کردن"},
+            {m: "آوردن", bm: "آورد", bz: "آور", k: "همراه آوردن"},
+            {m: "بردن", bm: "برد", bz: "بر", k: "حمل کردن"},
+            {m: "نشستن", bm: "نشست", bz: "نشین", k: "جلوس کردن"},
+            {m: "ایستادن", bm: "ایستاد", bz: "ایست", k: "توقف کردن"},
+            {m: "خوابیدن", bm: "خوابید", bz: "خواب", k: "استراحت کردن"},
+            {m: "دانستن", bm: "دانست", bz: "دان", k: "فهمیدن / آگاهی"},
+            {m: "خواستن", bm: "خواست", bz: "خواه", k: "طلب کردن"},
+            {m: "توانستن", bm: "توانست", bz: "توان", k: "قدرت داشتن"},
+            {m: "شستن", bm: "شست", bz: "شوی", k: "پاکیزه کردن"},
+            {m: "پختن", bm: "پخت", bz: "پز", k: "آماده سازی غذا"},
+            {m: "بریدن", bm: "برید", bz: "بر", k: "قطع کردن"},
+            {m: "دویدن", bm: "دوید", bz: "دو", k: "تند رفتن"},
+            {m: "پریدن", bm: "پرید", bz: "پر", k: "جهیدن"},
+            {m: "خندیدن", bm: "خندید", bz: "خند", k: "تبسم کردن"},
+            {m: "گریستن", bm: "گریست", bz: "گری", k: "گریه کردن"},
+            {m: "ترسیدن", bm: "ترسید", bz: "ترس", k: "بیم داشتن"},
+            {m: "بخشیدن", bm: "بخشید", bz: "بخش", k: "عطا کردن"},
+            {m: "پوشیدن", bm: "پوشید", bz: "پوش", k: "در بر کردن"},
+            {m: "زدن", bm: "زد", bz: "زن", k: "ضربه زدن"},
+            {m: "شکستن", bm: "شکست", bz: "شکن", k: "خرد شدن"},
+            {m: "بستن", bm: "بست", bz: "بند", k: "مسدود کردن"},
+            {m: "باز کردن", bm: "باز کرد", bz: "باز کن", k: "گشودن"},
+            {m: "فرستادن", bm: "فرستاد", bz: "فرست", k: "ارسال کردن"},
+            {m: "رسیدن", bm: "رسید", bz: "رس", k: "واصل شدن"},
+            {m: "گذشتن", bm: "گذشت", bz: "گذر", k: "عبور کردن"},
+            {m: "گرفتن", bm: "گرفت", bz: "گیر", k: "اخذ کردن"},
+            {m: "ماندن", bm: "ماند", bz: "مان", k: "توقف / اقامت"},
+            {m: "مردن", bm: "مرد", bz: "میر", k: "فوت کردن"},
+            {m: "کشتن", bm: "کشت", bz: "کش", k: "هلاک کردن"},
+            {m: "شناختن", bm: "شناخت", bz: "شناس", k: "تشخیص دادن"},
+            {m: "فهمیدن", bm: "فهمید", bz: "فهم", k: "درک کردن"},
+            {m: "پرسیدن", bm: "پرسید", bz: "پرس", k: "سوال کردن"},
+            {m: "جنگیدن", bm: "جنگید", bz: "جنگ", k: "نبرد کردن"},
+            {m: "ساختن", bm: "ساخت", bz: "ساز", k: "بنا کردن"},
+            {m: "سوختن", bm: "سوخت", bz: "سوز", k: "آتش گرفتن"},
+            {m: "انداختن", bm: "انداخت", bz: "انداز", k: "پرتاب کردن"},
+            {m: "پرداختن", bm: "پرداخت", bz: "پرداز", k: "تادیه کردن"},
+            {m: "نواختن", bm: "نواخت", bz: "نواز", k: "نوازندگی"},
+            {m: "بافتن", bm: "بافت", bz: "بaf", k: "بافندگی"},
+            {m: "یافتن", bm: "یافت", bz: "یاب", k: "پیدا کردن"},
+            {m: "پذیرفتن", bm: "پذیرفت", bz: "پذیر", k: "قبول کردن"},
+            {m: "گریختن", bm: "گریخت", bz: "گریز", k: "فرار کردن"},
+            {m: "آمیختن", bm: "آمیخت", bz: "آمیز", k: "مخلوط کردن"},
+            {m: "گسیختن", bm: "گسیخت", bz: "گسل", k: "پاره شدن"},
+            {m: "بیختن", bm: "بیخت", bz: "بیز", k: "الک کردن"},
+            {m: "ریختن", bm: "ریخت", bz: "ریز", k: "جاری شدن"},
+            {m: "فریفتن", bm: "فریفت", bz: "فریب", k: "گول زدن"},
+            {m: "خاریدن", bm: "خارید", bz: "خار", k: "خارش"},
+            {m: "کاویدن", bm: "کاوید", bz: "کاو", k: "جستجو کردن"},
+            {m: "بالیدن", bm: "بالید", bz: "بال", k: "افتخار کردن"},
+            {m: "نالیدن", bm: "نالید", bz: "نال", k: "ناله کردن"},
+            {m: "گردیدن", bm: "گردید", bz: "گرد", k: "چرخیدن"},
+            {m: "پوییدن", bm: "پویید", bz: "پوی", k: "تلاش و تکاپو"},
+            {m: "روییدن", bm: "رویید", bz: "روی", k: "رشد گیاه"},
+            {m: "جوییدن", bm: "جویید", bz: "جوی", k: "جویدن"},
+            {m: "بوییدن", bm: "بویید", bz: "بوی", k: "استشمام"},
+            {m: "ساییدن", bm: "سایید", bz: "سای", k: "سایش"},
+            {m: "آسودن", bm: "آسود", bz: "آسای", k: "آرامش یافتن"},
+            {m: "آزمودن", bm: "آزمود", bz: "آزمای", k: "تست کردن"},
+            {m: "پیمودن", bm: "پیمود", bz: "پیمای", k: "طی کردن"},
+            {m: "زدودن", bm: "زدود", bz: "زدای", k: "رفع کردن"},
+            {m: "فرمودن", bm: "فرمود", bz: "فرمای", k: "امر کردن"},
+            {m: "نمودن", bm: "نمود", bz: "نمای", k: "نشان دادن"},
+            {m: "ستودن", bm: "ستود", bz: "ستای", k: "تحسین کردن"},
+            {m: "گشودن", bm: "گشود", bz: "گشای", k: "باز کردن"},
+            {m: "درودن", bm: "درود", bz: "درو", k: "درو کردن"},
+            {m: "شنودن", bm: "شنود", bz: "شنو", k: "شنیدن"},
+            {m: "غنویدن", bm: "غنوید", bz: "غنو", k: "چرت زدن"},
+            {m: "درخشیدن", bm: "درخشید", bz: "درخش", k: "تابیدن"},
+            {m: "لرزیدن", bm: "لرزید", bz: "لرز", k: "تکان خوردن"},
+            {m: "وزیدن", bm: "وزید", bz: "وز", k: "وزش باد"},
+            {m: "پاشیدن", bm: "پاشید", bz: "پاش", k: "پراکندن"},
+            {m: "تراشیدن", bm: "تراشید", bz: "تراش", k: "تراش دادن"},
+            {m: "خراشیدن", bm: "خراشید", bz: "خراش", k: "زخمی کردن"},
+            {m: "چشیدن", bm: "چشید", bz: "چش", k: "چشیدن طعم"},
+            {m: "کشیدن", bm: "کشید", bz: "کش", k: "ترسیم / امتداد"},
+            {m: "پریدن", bm: "پرید", bz: "پر", k: "پرواز"},
+            {m: "چریدن", bm: "چرید", bz: "چر", k: "چریدن حیوان"},
+            {m: "خریدن", bm: "خرید", bz: "خر", k: "خریداری"},
+            {m: "دریدن", bm: "درید", bz: "در", k: "پاره کردن"},
+            {m: "گردیدن", bm: "گردید", bz: "گرد", k: "گشتن"},
+            {m: "لغزیدن", bm: "لغزید", bz: "لغز", k: "سر خوردن"},
+            {m: "بلعیدن", bm: "بلعید", bz: "بلع", k: "قورت دادن"},
+            {m: "طلبیدن", bm: "طلبید", bz: "طلب", k: "درخواست"},
+            {m: "فهمیدن", bm: "فهمید", bz: "fهم", k: "درک کردن"},
+            {m: "چسبیدن", bm: "چسبید", bz: "چسب", k: "اتصال یافتن"}
+        ];
+
+        function populateVerbs() {
+            const tbody = document.querySelector("#verbsTable tbody");
+            tbody.innerHTML = verbsData.map((v, i) => `
+                <tr class="hover:bg-indigo-50 transition-colors">
+                    <td class="p-3 border text-center text-xs text-gray-400">${i + 1}</td>
+                    <td class="p-3 border font-bold">${v.m}</td>
+                    <td class="p-3 border text-blue-700">${v.bm}</td>
+                    <td class="p-3 border text-green-700">${v.bz}</td>
+                    <td class="p-3 border">${v.k}</td>
+                </tr>
+            `).join('');
+        }
+
+        function filterVerbs() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toLowerCase();
+            const rows = document.querySelectorAll("#verbsTable tbody tr");
+
+            rows.forEach(row => {
+                const text = row.innerText.toLowerCase();
+                row.style.display = text.includes(filter) ? "" : "none";
+            });
+        }
+
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('text-indigo-600', 'border-indigo-600', 'border-b-2');
+                btn.classList.add('text-gray-500');
+            });
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('text-gray-500');
+            activeBtn.classList.add('text-indigo-600', 'border-indigo-600', 'border-b-2');
+
+            document.getElementById('summary-section').style.display = (tabId === 'verb-library') ? 'none' : 'block';
+        }
+
+        window.onload = populateVerbs;
+    </script>
+</body>
+</html>
