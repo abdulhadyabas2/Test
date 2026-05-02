@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -73,6 +72,7 @@
             <button onclick="showTab('pres-ind')" id="btn-pres-ind" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع اخباری</button>
             <button onclick="showTab('pres-sub')" id="btn-pres-sub" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">مضارع التزامی</button>
             <button onclick="showTab('verb-library')" id="btn-verb-library" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">بانک ۱۰۰ فعل</button>
+            <button onclick="showTab('vocab')" id="btn-vocab" class="tab-btn px-4 py-4 font-bold text-gray-500 hover:text-indigo-600 hover:bg-indigo-50 transition-all">واژگان جامع</button>
         </nav>
 
         <!-- Content Area -->
@@ -90,17 +90,31 @@
                         <li>🔵 ما در رستوران غذا <span class="font-bold text-blue-700">خوردیم</span>.</li>
                     </ul>
                 </div>
+                
+                <div class="mt-6 bg-yellow-50 border-r-4 border-yellow-400 p-4 rounded-xl shadow-sm">
+                    <h4 class="font-bold text-yellow-800 mb-2">📝 تکلیف (واجب):</h4>
+                    <p class="text-sm text-yellow-700">با استفاده از فرمول ماضی ساده، ۵ فعل مختلف را صرف کنید و در دفتر خود بنویسید.</p>
+                </div>
             </div>
 
             <!-- Section: Past Continuous -->
             <div id="past-cont" class="tab-content">
                 <h2 class="text-2xl font-bold text-indigo-800 mb-2">ماضی استمراری</h2>
-                <div class="formula"><strong>طرز ساخت:</strong> می‌ + بن ماضی + شناسه</div>
+                <p class="text-gray-700 mb-3 text-sm border-r-2 border-indigo-400 pr-2"><strong>تعریف:</strong> فعلی که در ماضی (در گذشته) تکرار دارد.</p>
+                <div class="formula"><strong>طرز ساخت:</strong> می‌ + فعل ماضی ساده (بن ماضی + شناسه)</div>
                 <div class="example-box">
                     <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
-                    <ul class="space-y-2">
-                        <li>🟢 من هر روز پیاده <span class="font-bold text-green-700">می‌رفتم</span>.</li>
-                        <li>🟢 آن زمان، او نامه <span class="font-bold text-green-700">می‌نوشت</span>.</li>
+                    <div class="mb-4 p-3 bg-white rounded-lg border border-amber-200 text-sm shadow-sm flex flex-wrap gap-2">
+                        <span class="font-bold text-green-700">صرف افعال (نمونه):</span> 
+                        <span class="bg-gray-100 px-2 py-1 rounded">می‌رَفتَم</span>
+                        <span class="bg-gray-100 px-2 py-1 rounded">می‌خوردَم</span>
+                        <span class="bg-gray-100 px-2 py-1 rounded">می‌گُفتی</span>
+                        <span class="bg-gray-100 px-2 py-1 rounded">می‌خواندَم</span>
+                    </div>
+                    <ul class="space-y-3">
+                        <li>🟢 من در گذشته به مدرسه <span class="font-bold text-green-700">می‌رَفتَم</span> اما الان به دانشگاه <span class="font-bold text-red-600">می‌رَوَم</span>.</li>
+                        <li>🟢 من در گذشته در این دانشگاه درس <span class="font-bold text-green-700">می‌خواندَم</span>.</li>
+                        <li>🟢 من در گذشته وَرزِش <span class="font-bold text-green-700">می‌کَردَم</span> ولی الان وَرزِش <span class="font-bold text-red-600">نمی‌کُنَم</span>.</li>
                     </ul>
                 </div>
             </div>
@@ -109,11 +123,35 @@
             <div id="pres-ind" class="tab-content">
                 <h2 class="text-2xl font-bold text-indigo-800 mb-2">مضارع اخباری</h2>
                 <div class="formula"><strong>طرز ساخت:</strong> می‌ + بن مضارع + شناسه</div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 shadow-sm">
+                        <h4 class="font-bold text-blue-800 mb-2">📌 کاربردها (نستخدم فعل مضارع اخباری):</h4>
+                        <ol class="list-decimal list-inside text-sm text-blue-700 space-y-2">
+                            <li><strong>بالتکرار (بالعاده):</strong> کارهایی که هر روز انجام می‌دهیم.</li>
+                            <li><strong>بالحال (بالمضارع):</strong> کاری که الان انجام می‌شود.</li>
+                            <li><strong>بالمستقبل (آینده):</strong> برای برنامه‌های قطعی آینده.</li>
+                        </ol>
+                    </div>
+                    <div class="bg-red-50 p-4 rounded-xl border border-red-100 shadow-sm">
+                        <h4 class="font-bold text-red-800 mb-2">🔄 صرف فعل (خوردن):</h4>
+                        <div class="grid grid-cols-2 gap-y-2 text-sm text-red-700 font-medium">
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> من می‌خورَم</div>
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> ما می‌خوریم</div>
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> تو می‌خوری</div>
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> شما می‌خورید</div>
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> او می‌خورَد</div>
+                            <div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-red-400"></span> آنها می‌خورَند</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="example-box">
                     <h3 class="font-bold text-amber-900 mb-3 underline">جملات نمونه:</h3>
                     <ul class="space-y-2">
-                        <li>🔴 من هر شب کتاب <span class="font-bold text-red-700">می‌خوانم</span>.</li>
-                        <li>🔴 او همیشه چای <span class="font-bold text-red-700">می‌خورد</span>.</li>
+                        <li>🔴 من هر شب کتاب <span class="font-bold text-red-700">می‌خوانم</span>. (تکرار / عادة)</li>
+                        <li>🔴 او الان چای <span class="font-bold text-red-700">می‌خورد</span>. (حال / مضارع)</li>
+                        <li>🔴 فردا به تهران <span class="font-bold text-red-700">می‌روم</span>. (آینده / مستقبل)</li>
                     </ul>
                 </div>
             </div>
@@ -131,7 +169,7 @@
                 </div>
             </div>
 
-            <!-- New Section: Verb Library (100 Verbs) -->
+            <!-- Section: Verb Library (100 Verbs) -->
             <div id="verb-library" class="tab-content">
                 <h2 class="text-2xl font-bold text-indigo-800 mb-4">بانک ۱۰۰ فعل مهم فارسی</h2>
                 <p class="text-gray-600 mb-6">در اینجا لیست مهم‌ترین فعل‌ها به همراه هر دو بن (ماضی و مضارع) آماده شده است.</p>
@@ -158,27 +196,355 @@
                 </div>
             </div>
 
+            <!-- Section: Vocabulary -->
+            <div id="vocab" class="tab-content">
+                <h2 class="text-2xl font-bold text-indigo-800 mb-6">واژگان جامع (مفردات شاملة)</h2>
+                
+                <!-- Family Group -->
+                <h3 class="text-xl font-bold text-indigo-600 mb-4 border-b-2 border-indigo-100 pb-2">خانواده (الأسرة)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">پِدَر / بابا</div>
+                        <div class="text-sm text-indigo-600 mt-2">أب / بابا</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">مادَر / مامان</div>
+                        <div class="text-sm text-indigo-600 mt-2">أم / ماما</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">خواهَر</div>
+                        <div class="text-sm text-indigo-600 mt-2">أخت</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">بَرادَر</div>
+                        <div class="text-sm text-indigo-600 mt-2">أخ</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">زَن</div>
+                        <div class="text-sm text-indigo-600 mt-2">زوجة / امرأة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">شوهَر</div>
+                        <div class="text-sm text-indigo-600 mt-2">زوج</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">هَمسَر</div>
+                        <div class="text-sm text-indigo-600 mt-2">زوج / زوجة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">فَرزَند / بَچه</div>
+                        <div class="text-sm text-indigo-600 mt-2">طفل / ولد</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">پِدَربُزُرگ</div>
+                        <div class="text-sm text-indigo-600 mt-2">جد</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">مادَربُزُرگ</div>
+                        <div class="text-sm text-indigo-600 mt-2">جدة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">نَوه</div>
+                        <div class="text-sm text-indigo-600 mt-2">حفيد</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">عَمو</div>
+                        <div class="text-sm text-indigo-600 mt-2">عَم</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">عَمه</div>
+                        <div class="text-sm text-indigo-600 mt-2">عَمة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">دایی</div>
+                        <div class="text-sm text-indigo-600 mt-2">خال</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">خاله</div>
+                        <div class="text-sm text-indigo-600 mt-2">خالة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">داماد</div>
+                        <div class="text-sm text-indigo-600 mt-2">العريس / صهر</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">عَروس</div>
+                        <div class="text-sm text-indigo-600 mt-2">العروس / كنة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">بَرادَرزاده</div>
+                        <div class="text-sm text-indigo-600 mt-2">ولد الأخ / بنت الأخ</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">خواهَرزاده</div>
+                        <div class="text-sm text-indigo-600 mt-2">ولد الأخت / بنت الأخت</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">پِسَرخاله</div>
+                        <div class="text-sm text-indigo-600 mt-2">ابن الخالة</div>
+                    </div>
+                    <div class="bg-indigo-50 border border-indigo-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-indigo-900">دُختَرخاله</div>
+                        <div class="text-sm text-indigo-600 mt-2">بنت الخالة</div>
+                    </div>
+                </div>
+
+                <!-- Verbs Group -->
+                <h3 class="text-xl font-bold text-emerald-600 mb-4 border-b-2 border-emerald-100 pb-2">افعال (الأفعال)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">کُمَک کَردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">مساعدة</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">باران آمَدَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">مطر / هطول المطر</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">بیدار کَردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">الاستيقاظ / إيقاظ</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">پِچ پِچ کَردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">ثرثرة / همس</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">جَمع شُدَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">تجمع (لازم)</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">جَمع کَردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">يجمع (متعدي)</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">چَسبیدَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">الالتصاق</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">حَرف زَدَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">التحدث / الكلام</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">شُستَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">غسل</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">شُمُردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">عد / حساب</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">قِصّه گُفتَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">رواية قصة</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">نِشَستَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">جلس / الجلوس</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">بیرون رَفتَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">الخروج</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">تَصمیم گِرِفتَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">اتخاذ قرار / تقرير</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">دَرس دادَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">تدريس / تعليم</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">عَوَض کَردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">تغيير / تبديل</div>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-emerald-900">مُردَن</div>
+                        <div class="text-sm text-emerald-600 mt-2">موت / وفاة</div>
+                    </div>
+                </div>
+
+                <!-- General Nouns Group -->
+                <h3 class="text-xl font-bold text-amber-600 mb-4 border-b-2 border-amber-100 pb-2">اسامی و کلمات دیگر (أسماء وكلمات أخرى)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">اِیوان</div>
+                        <div class="text-sm text-amber-600 mt-2">ساحة / إيوان</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">چَک چَک</div>
+                        <div class="text-sm text-amber-600 mt-2">تقاطر المياه</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">خُرخُر</div>
+                        <div class="text-sm text-amber-600 mt-2">صوت النائم / شخير</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">سُفره</div>
+                        <div class="text-sm text-amber-600 mt-2">مائدة / سفرة</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">تِعداد</div>
+                        <div class="text-sm text-amber-600 mt-2">عدد / كمية</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">کُرسی</div>
+                        <div class="text-sm text-amber-600 mt-2">كرسي / مائدة التدفئة</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">هَمدیگَر</div>
+                        <div class="text-sm text-amber-600 mt-2">بعضنا البعض</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">آرایشگاه</div>
+                        <div class="text-sm text-amber-600 mt-2">صالون حلاقة</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">اِمتِحان</div>
+                        <div class="text-sm text-amber-600 mt-2">امتحان / اختبار</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">بیمارِستان</div>
+                        <div class="text-sm text-amber-600 mt-2">مستشفى</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">دَرآمَد</div>
+                        <div class="text-sm text-amber-600 mt-2">دخل / إيراد</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">مُدَّت</div>
+                        <div class="text-sm text-amber-600 mt-2">مدة / فترة</div>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-amber-900">نُمره</div>
+                        <div class="text-sm text-amber-600 mt-2">درجة / علامة</div>
+                    </div>
+                </div>
+
+                <!-- Professions Group -->
+                <h3 class="text-xl font-bold text-blue-600 mb-4 border-b-2 border-blue-100 pb-2 mt-8">مشاغل (المهن)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">آشپَز</div>
+                        <div class="text-sm text-blue-600 mt-2">طباخ</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">اُستاد</div>
+                        <div class="text-sm text-blue-600 mt-2">أستاذ</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">پِزِشک</div>
+                        <div class="text-sm text-blue-600 mt-2">طبيب</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">خَلَبان</div>
+                        <div class="text-sm text-blue-600 mt-2">طيار</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">رانَنده</div>
+                        <div class="text-sm text-blue-600 mt-2">سائق</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">کارگَر</div>
+                        <div class="text-sm text-blue-600 mt-2">عامل</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">کارمَند</div>
+                        <div class="text-sm text-blue-600 mt-2">موظف</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">مُعَلِّم</div>
+                        <div class="text-sm text-blue-600 mt-2">معلم</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">مُهَندِس</div>
+                        <div class="text-sm text-blue-600 mt-2">مهندس</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">نَجّار</div>
+                        <div class="text-sm text-blue-600 mt-2">نجار</div>
+                    </div>
+                    <div class="bg-blue-50 border border-blue-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-blue-900">وَکیل</div>
+                        <div class="text-sm text-blue-600 mt-2">محامي</div>
+                    </div>
+                </div>
+
+                <!-- Adjectives Group -->
+                <h3 class="text-xl font-bold text-pink-600 mb-4 border-b-2 border-pink-100 pb-2 mt-8">صفت‌ها (الصفات)</h3>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">جَوان</div>
+                        <div class="text-sm text-pink-600 mt-2">شاب / يافع</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">خَسته</div>
+                        <div class="text-sm text-pink-600 mt-2">متعب / مرهق</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">خوشحال</div>
+                        <div class="text-sm text-pink-600 mt-2">سعيد / مسرور</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">سَخت</div>
+                        <div class="text-sm text-pink-600 mt-2">صعب / قاسي</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">مُشکِل</div>
+                        <div class="text-sm text-pink-600 mt-2">مشكلة / صعب</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">مُختَلِف</div>
+                        <div class="text-sm text-pink-600 mt-2">مختلف</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">ناراحَت</div>
+                        <div class="text-sm text-pink-600 mt-2">حزين / منزعج</div>
+                    </div>
+                    <div class="bg-pink-50 border border-pink-100 p-4 rounded-xl text-center shadow-sm hover:shadow-md transition-shadow">
+                        <div class="font-bold text-lg text-pink-900">نامُرَتَّب</div>
+                        <div class="text-sm text-pink-600 mt-2">غير مرتب / فوضوي</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- THE MASTER SUMMARY TABLE -->
             <div id="summary-section" class="mt-16 bg-gray-900 text-white rounded-2xl p-6 md:p-10 shadow-xl">
-                <h2 class="text-3xl font-bold text-center mb-8 text-indigo-300">جدول خلاصه شناسه زمان‌ها (برای فعل رفتن)</h2>
+                <h2 class="text-3xl font-bold text-center mb-4 text-indigo-300">جدول جامع تبدیل جملات در تمامی زمان‌ها</h2>
+                <p class="text-center text-gray-300 mb-8">در اینجا ۳ جمله مختلف را انتخاب کرده و آن‌ها را در ۴ زمان اصلی صرف و مقایسه کرده‌ایم.</p>
                 <div class="overflow-x-auto">
                     <table class="w-full text-center border-collapse summary-table text-sm md:text-base">
                         <thead>
                             <tr>
-                                <th class="p-4 border border-gray-700">ضمیر</th>
-                                <th class="p-4 border border-gray-100 bg-blue-900">ماضی ساده</th>
-                                <th class="p-4 border border-gray-100 bg-green-900">ماضی استمراری</th>
-                                <th class="p-4 border border-gray-100 bg-red-900">مضارع اخباری</th>
-                                <th class="p-4 border border-gray-100 bg-purple-900">مضارع التزامی</th>
+                                <th class="p-4 border border-gray-700 bg-gray-800">زمان (Tense)</th>
+                                <th class="p-4 border border-gray-100 bg-blue-900">جمله ۱ (اول شخص جمع)</th>
+                                <th class="p-4 border border-gray-100 bg-green-900">جمله ۲ (دوم شخص مفرد)</th>
+                                <th class="p-4 border border-gray-100 bg-red-900">جمله ۳ (سوم شخص مفرد)</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-200">
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">من</td><td>رفتم</td><td>می‌رفتم</td><td>می‌روم</td><td>بروم</td></tr>
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">تو</td><td>رفتی</td><td>می‌رفتی</td><td>می‌روی</td><td>بروی</td></tr>
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">او</td><td>رفت</td><td>می‌رفت</td><td>می‌رود</td><td>برود</td></tr>
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">ما</td><td>رفتیم</td><td>می‌رفتیم</td><td>می‌رویم</td><td>برویم</td></tr>
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">شما</td><td>رفتید</td><td>می‌رفتید</td><td>می‌روید</td><td>بروید</td></tr>
-                            <tr><td class="p-3 border border-gray-700 font-bold bg-gray-800">آنها</td><td>رفتند</td><td>می‌رفتند</td><td>می‌روند</td><td>بروند</td></tr>
+                            <tr>
+                                <td class="p-3 border border-gray-700 font-bold bg-gray-800">ماضی ساده</td>
+                                <td class="p-3 border border-gray-700">ما غذای لذیذی <span class="text-blue-300">پختیم</span></td>
+                                <td class="p-3 border border-gray-700">تو به دانشگاه <span class="text-green-300">رفتی</span></td>
+                                <td class="p-3 border border-gray-700">او کتاب را <span class="text-red-300">خواند</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-700 font-bold bg-gray-800">ماضی استمراری</td>
+                                <td class="p-3 border border-gray-700">ما غذای لذیذی <span class="text-blue-300">می‌پختیم</span></td>
+                                <td class="p-3 border border-gray-700">تو به دانشگاه <span class="text-green-300">می‌رفتی</span></td>
+                                <td class="p-3 border border-gray-700">او کتاب را <span class="text-red-300">می‌خواند</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-700 font-bold bg-gray-800">مضارع اخباری</td>
+                                <td class="p-3 border border-gray-700">ما غذای لذیذی <span class="text-blue-300">می‌پزیم</span></td>
+                                <td class="p-3 border border-gray-700">تو به دانشگاه <span class="text-green-300">می‌روی</span></td>
+                                <td class="p-3 border border-gray-700">او کتاب را <span class="text-red-300">می‌خواند</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 border border-gray-700 font-bold bg-gray-800">مضارع التزامی</td>
+                                <td class="p-3 border border-gray-700">(باید) ما غذای لذیذی <span class="text-blue-300">بپزیم</span></td>
+                                <td class="p-3 border border-gray-700">(شاید) تو به دانشگاه <span class="text-green-300">بروی</span></td>
+                                <td class="p-3 border border-gray-700">(کاش) او کتاب را <span class="text-red-300">بخواند</span></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -327,7 +693,7 @@
             activeBtn.classList.remove('text-gray-500');
             activeBtn.classList.add('text-indigo-600', 'border-indigo-600', 'border-b-2');
 
-            document.getElementById('summary-section').style.display = (tabId === 'verb-library') ? 'none' : 'block';
+            document.getElementById('summary-section').style.display = (tabId === 'verb-library' || tabId === 'vocab') ? 'none' : 'block';
         }
 
         window.onload = populateVerbs;
